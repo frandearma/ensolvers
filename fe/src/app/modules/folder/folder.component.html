@@ -1,0 +1,40 @@
+<div class="container py-5">
+  <div class="row">
+    <!-- Folders List --->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-4" *ngFor="let folder of folders">
+      <div class="nga-card bg-light mb-3">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-10 col-xl-10">
+              <h5 class="card-title">{{folder.name}}</h5>
+            </div>
+            <div class="col-2 col-xl-2">
+              <i class="far fa-clone  fa-lg text-primary"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">
+              <del>Study Math</del>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">Exam chemistry</a>
+            <a href="#" class="list-group-item list-group-item-action">Read 4.2 Scrum Book</a>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="col">
+              <a href="#" routerLink="/folder/{{folder.id}}" class="btn btn-primary"><i class="fas fa-edit me-1"></i>Edit Task's</a>
+            </div>
+            <div class="col">
+              <button class="btn btn-danger" (click)="deleteFolder(folder.id, folder.name)"><i
+                class="fas fa-trash me-1"></i>Delete Folder
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

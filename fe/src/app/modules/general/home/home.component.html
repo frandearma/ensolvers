@@ -1,0 +1,45 @@
+<div class="container py-5">
+  <div class="row">
+    <!-- Folders List --->
+    <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-12 mb-12">
+      <div class="nga-card bg-light mb-3">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-10 col-xl-10">
+              <h5 class="card-title">To-Do List</h5>
+            </div>
+            <div class="col-2 col-xl-2">
+              <i class="far fa-clone  fa-lg text-primary"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card-body d-flex flex-column">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-action" *ngFor="let task of tasks">
+              <div class="input-group" style="display:table; width:100%;">
+                <span style="padding: 0 8px; vertical-align: middle;">{{task.detail}}</span>
+                <span style="display: table-cell; width: 50px;text-decoration:none;">
+                  <div class="btn-group">
+                  <input class="form-check-input" (click)="checkTask(task.id,task.checked)" style='margin-right:10px' type="checkbox"[checked]="task.checked">
+                &nbsp;&nbsp;
+                  <button [routerLink]="['/task/edit-task', task.id]" class="btn btn-primary btn-sm align-self-end"><i class="fas fa-edit me-1"></i></button>
+                  </div>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="col">
+              <a href="#" routerLink="/folder/new-folder"  class="btn btn-success"><i class="fas fa-folder me-1"></i>New Folder</a>
+            </div>
+            <div class="col">
+              <a href="#" routerLink="/task/new-task"  class="btn btn-success"><i class="fas fa-plus me-1"></i>New Task</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

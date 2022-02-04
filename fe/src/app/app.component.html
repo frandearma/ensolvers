@@ -1,0 +1,40 @@
+<header class="navbar navbar-expand-md navbar-dark fixed-top nga-navbar">
+  <nav class="container" aria-label="Main navigation">
+    <a href="" class="navbar-brand" alt="Accueil" aria-label="Ensolvers">
+      <img src="./assets/params/images/logo/logo.png" srcset="./assets/params/images/logo/logo.png,
+      ./assets/params/images/logo/logo.png 2x" alt="Logo Ensolvers">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/">
+            <i class="fas fa-home me-1"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/folder/new-folder">
+            <i class="fas fa-plus me-1"></i>New Folder</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/folder/detail">
+            <i class="fas fa-list me-1"></i>List Folders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/task/new-task">
+            <i class="fas fa-plus me-1"></i>New Task</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button type="button" class="btn btn-sm nga-btn-navbar me-2" routerLink="/signup"><i
+            class="fas fa-user-plus me-2"></i>Sign up</button>
+      </form>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

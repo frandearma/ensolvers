@@ -1,0 +1,21 @@
+<div class="container py-5">
+  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-12">
+    <form (ngSubmit)="newFolder()" [formGroup]="formNewFolder">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputDetail">Name for Folder</label>
+          <input #detail formControlName="name"  type="text" class="form-control" id="inputDetail" name="name" required placeholder="Ex. Daily Task..">
+        </div>
+      <br>
+        <div class="row">
+          <div class="col">
+            <a href="#" routerLink="/" class="btn btn-primary"><i class="fas fa-arrow-left me-1"></i>Back</a>
+          </div>
+          <div class="col">
+            <button #btnNewFolder type="submit" class="btn btn-success"><i class="fas fa-plus me-1"></i> Create Folder</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
